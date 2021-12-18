@@ -12,8 +12,8 @@ function App() {
     try {
       const response = await fetch(url);
       const students = await response.json();
-      setLoading(false);
       setStudents(students);
+      setLoading(false);
     } catch (error) {
       setLoading(false);
       console.log('rejected', error)
@@ -23,18 +23,16 @@ function App() {
     fetchStudents();
   }, [])
 
-  if (loading) {
+  while (loading) {
     return <div>
       <Loading />
     </div>
   }
-  else {
     return (
       <div>
         <Students students={students} />
       </div>
     );
-  }
 }
 
 export default App;

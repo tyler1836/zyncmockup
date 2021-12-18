@@ -5,12 +5,15 @@ const Student = ({ city, company, email, firstName, lastName, grades }) => {
     const [readMore, setReadMore] = useState(false)
     return (
         <div className='student-info'>
-            <p>{firstName}</p>
-            <p>{lastName}</p>
-            <p>{city}</p>
-            <p>{company}</p>
-            <p>{email}</p>
-            <p>{grades[0]}</p>
+            <p>First Name: {firstName}</p>
+            <p>Last Name: {lastName}</p>
+            <p>City: {city}</p>
+            <p>Company: {company}</p>
+            <p>Email: {email}</p>
+            <p>Grades:</p>
+            {grades.map((grade) => {
+               return <p>{grade}</p>
+            })}
                 {/* <p>{readMore ? info : `${grades.substring(0, 200)}...`}
                 <button onClick={() => setReadMore(!readMore)}>{readMore ? 'show less' : 'read more'}
                 </button>
