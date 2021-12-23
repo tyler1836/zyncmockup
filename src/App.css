@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  max-width: 100%;
   
 }
 
@@ -12,11 +11,34 @@
   border-bottom: 3px solid lightgray;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .pic{
-  transform: scale(4);
+  transform: scale(2);
   border: 3px solid lightgray;
   border-radius: 50%;
+}
+
+#myInput {
+  border: none;
+  width: 90%; 
+  font-size: 16px; 
+  padding: 12px 20px 12px 40px; 
+  border-bottom: 1px solid #ddd; 
+  margin-bottom: 12px; 
+}
+
+@media screen and (max-width: 900px) {
+  #myInput{
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .pic{
+    border: none;
+    transform: scale(.7);
+  }
+  
+  
 }

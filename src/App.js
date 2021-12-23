@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Students from './Students.js'
 import Loading from './Loading'
+import Search from './Search'
 import './App.css';
 
 const url = 'https://api.hatchways.io/assessment/students';
@@ -31,6 +32,7 @@ function App() {
   }
     return (
       <div>
+        <Search students={students} />
         <Students students={students} />
       </div>
     );

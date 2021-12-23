@@ -14,7 +14,7 @@ const Student = ({ city, company, email, firstName, pic, skill, lastName, grades
     for (let i = 0; i < grades.length; i++) {
         let parse = parseInt(grades[i]);
             total += parse;
-            console.log(total)
+            
     }
     var avg = total / grades.length;
     return (
