@@ -12,6 +12,7 @@ function App() {
     try {
       const response = await fetch(url);
       const students = await response.json();
+      console.log(students)
       setStudents(students);
       setLoading(false);
     } catch (error) {

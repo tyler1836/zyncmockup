@@ -3,12 +3,20 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  max-width: 100%;
   
 }
 
 .student-info{
   padding: 20px;
-  margin-bottom: 15px;
+  border-bottom: 3px solid lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.pic{
+  transform: scale(4);
   border: 3px solid lightgray;
+  border-radius: 50%;
 }
